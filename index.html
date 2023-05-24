@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light sticky-top bg-body-tertiary">
+            <div>
+                <a href="index.html"><img src="logo.png" height="60px;" width="auto;"></a>
+            </div>
+            <div>
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Catalog.html">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a href="Orders.html">
+                    <div class="cart">
+                      <i class="bi bi-cart2"></i>
+                      <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container-fluid">
+            </div>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-7" style="color:rgb(109, 56, 31);">
+                        <p class="mt-3" style="display:flex; justify-content:end;">The right dessert for any occasion</p><br>
+                        <h2 style="font-size:60px;display:flex; justify-content:end;">THE BEST DESSERTS</h2><br><br>
+                        <p>We offer cakes, cupcakes, cookies, pastries<br> and more. Baked with love and joy to make<br> your moments unforgettable</p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="pictures/chocolate-chocolate-cake-1.jpg" style="width:100%">
+                                  <div class="text">Chocolate cake</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="pictures/millionaire_shortbreadi.jpg" style="width:100%">
+                                  <div class="text">Millionaire shortbread</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="pictures/chocodessert.jpeg" style="width:100%">
+                                  <div class="text">Chocolate dessert</div>
+                                </div>
+                                
+                            </div>
+                            <script>
+                                let slideIndex = 0;
+                                showSlides();
+                        
+                                function showSlides() {
+                                let i;
+                                let slides = document.getElementsByClassName("mySlides");
+                                    for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                    }
+                                    slideIndex++;
+                                    if (slideIndex > slides.length) {slideIndex = 1}
+                                    slides[slideIndex-1].style.display = "block";
+                                setTimeout(showSlides, 2000); // Change image every 2 seconds
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <h1><a class="heading" href="Catalog.html">Cakes</a></h1>
+                </div>
+                <div class="row products">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Flourless-Chocolate-Coconut-Cake-3.jpg" class="card-img-top" alt="Coconut Cake">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocolate Coconut Cake</h4>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/delish-200827-marshmallow-cake-0004-landscape-ag-1598883971.jpg" height="180px" class="card-img-top" alt="Marshmallow Cake">
+                            <div class="card-body">
+                                <h4 class="card-title">Marshmallow Cake</h4>
+                                <p class="card-text">$16</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/flourless-chocolate-cake-85892-1.jpeg"" height="180px" class="card-img-top" alt="Flourless Cake">
+                            <div class="card-body">
+                                <h4 class="card-title">Flourless Chocolate Cake</h4>
+                                <p class="card-text">$12</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Chocolate_Chip_Cooke_Tart.jpeg" height="180px" class="card-img-top" alt="Chip Cookie Tart">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocolate Chip Cookie Tart</h4>
+                                <p class="card-text">$18</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><a class="heading" href="Catalog.html">Cookies</a></h1>
+                </div>
+                <div class="row products">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/chocolate_chip_cookies.jpg" height="180px" class="card-img-top" alt="Chocolate Chip Cookies">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocolate Chip Cookies</h4>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/potato-chip-cookies-3.jpg" height="180px" class="card-img-top" alt="Potato Chip Cookies">
+                            <div class="card-body">
+                                <h4 class="card-title">Potato Chip Cookies</h4>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/cannoli-cookies1-1663332097.jpg" height="180px" class="card-img-top" alt="Cannoli Cookies">
+                            <div class="card-body">
+                                <h4 class="card-title">Cannoli Cookies</h4><br>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/chocolate-peppermint-crunch-cookies.jpg" height="180px" class="card-img-top" alt="Chocolate Crunch Cookies">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocolate Crunch Cookies</h4>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><a class="heading" href="Catalog.html">Candies</a></h1>
+                </div>
+                <div class="row products">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Scotchmallows.jpg" height="180px" class="card-img-top" alt="Scotchmallows">
+                            <div class="card-body">
+                                <h4 class="card-title">Scotchmallows Candies</h4>
+                                <p class="card-text">$11</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/almond-choco.jpg" height="180px" class="card-img-top" alt="Almonds">
+                            <div class="card-body">
+                                <h4 class="card-title">Dark Chocolate Almonds</h4>
+                                <p class="card-text">$9</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Brittle.jpg" height="180px" class="card-img-top" alt="Brittle">
+                            <div class="card-body">
+                                <h4 class="card-title">Dark Brittle Candies</h4>
+                                <p class="card-text">$11</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Dark-Marzipan.jpg" height="180px" class="card-img-top" alt="Marzipan">
+                            <div class="card-body">
+                                <h4 class="card-title">Dark Marzipan</h4><br>
+                                <p class="card-text">$11</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><a class="heading" href="Catalog.html">Other</a></h1>
+                </div>
+                <div class="row products">
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/fantasy-fudge.jpg" height="180px" class="card-img-top" alt="Fantasy Fudge">
+                            <div class="card-body">
+                                <h4 class="card-title">Fantasy Fudge</h4><br>
+                                <p class="card-text">$11</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Chocolate-Crinkle-Cookies-6.jpg" height="180px" class="card-img-top" alt="Crinkle">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocolate Crinkle Cookies</h4>
+                                <p class="card-text">$15</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/strawberries.webp" height="180px" class="card-img-top" alt="Strawberries">
+                            <div class="card-body">
+                                <h4 class="card-title">Strawberries in Chocolate</h4>
+                                <p class="card-text">$11</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card text-center text-bg-primary">
+                            <img src="pictures/Chocoflan.jpg" height="180px" class="card-img-top" alt="Marzipan">
+                            <div class="card-body">
+                                <h4 class="card-title">Chocoflan</h4><br>
+                                <p class="card-text">$17</p>
+                                <div class="button">
+                                    <a href="Catalog.html" style="color:white;">Order now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>Find Us On</h5>        
+          <div>
+            <a href="https://www.instagram.com/" class="hover-opacity">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="insta" id="insta">
+            </a>
+        </div>
+        <h5>Do you want to play a <a href="game.html" style="color:white">game</a>?</h5>
+    </footer>
+</body>
+
+<script src="src/Data.js"></script>
+<script src="src/main.js"></script>
+</html>
