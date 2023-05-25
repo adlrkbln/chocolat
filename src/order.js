@@ -17,9 +17,9 @@ let generateCartItems = () => {
         let { id, item } = x;
         let search = shopItemsDataInt.find((y) => y.id === id) || [];
         return `
-      <div class="cart-item">
-        <img width="300" src=${search.img} style="border-radius:10px;"alt="" />
-        <div class="details">
+      <div class="cart-item row">
+        <img class="col-12 col-md-3" width="300" src=${search.img} style="border-radius:10px;"alt="" />
+        <div class="col-12 col-md-8 details">
           <div class="title-price-x">
               <h4 class="title-price">
                 <p>${search.name}</p>
