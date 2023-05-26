@@ -76,7 +76,8 @@ let decrement = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem);
   if (search === undefined) return;
-  else if (search.item === 0) return;
+  else if (search.item === 0) {location.reload();return;}
+  else if (search.item===1) {search.item-=1;location.reload(); }
   else {
     search.item -= 1;
   }
@@ -99,10 +100,10 @@ let update = (id) => {
 let removeItem = (id) => {
   let selectedItem = id;
   basket = basket.filter((x) => x.id !== selectedItem);
+  update(selectedItem);
   generateCartItems();
-  TotalAmount();
-  update(id);
   info();
+  location.reload();
   localStorage.setItem("prod", JSON.stringify(basket));
 };
 
