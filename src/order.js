@@ -100,7 +100,6 @@ let update = (id) => {
 let removeItem = (id) => {
   let selectedItem = id;
   basket = basket.filter((x) => x.id !== selectedItem);
-  update(selectedItem);
   generateCartItems();
   info();
   location.reload();
