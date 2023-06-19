@@ -1,12 +1,16 @@
 html{height:100%;}
 body{
-    margin:0;
-    height:100%;
-    background-image: url('bg2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;}
+  margin:0;
+  height:100%;
+  background-color: #f5f0ea;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+  background-color: #f2dac1;
+}
 .carousel {margin:50px 0px;width:90%;border:2px solid rgb(53, 16, 0);box-shadow: 9px 9px 9px rgb(123, 76, 54);}
 h1 {
    font-size:30px;
@@ -289,3 +293,82 @@ i {
   height:40px;
   color:white;
 }
+
+.back-to-top { 
+  position: fixed; 
+  bottom: -40px; 
+  right: 40px; 
+  display: block; 
+  width: 50px; 
+  height: 50px; 
+  line-height: 50px; 
+  background: brown; 
+  color: #fff; 
+  text-align: center; 
+  text-decoration: none; 
+  border-radius: 50%; 
+  opacity: 0; 
+  -webkit-transform: scale(0.3); 
+  -ms-transform: scale(0.3); 
+  transform: scale(0.3); 
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+  z-index: 9; 
+  -webkit-transition: all 0.3s; 
+  transition: all 0.3s; 
+  } 
+  .back-to-top:focus { 
+  color: #fff; 
+  } 
+  .back-to-top.show { 
+  bottom: 40px; 
+  right: 40px; 
+  opacity: 1; 
+  -webkit-transform: scale(1); 
+  -ms-transform: scale(1); 
+  transform: scale(1); 
+  } 
+  .back-to-top.show:hover { 
+  color: #ffffff; 
+  bottom: 30px; 
+  opacity: 1; 
+  } 
+   
+  @keyframes bounceAlpha { 
+  0% {opacity: 1; transform: rotate(-90deg) translateX(0px) scale(1);} 
+  25%{opacity: 0; transform: rotate(-90deg) translateX(10px) scale(0.9);} 
+  26%{opacity: 0; transform: rotate(-90deg) translateX(-10px) scale(0.9);} 
+  55% {opacity: 1; transform: rotate(-90deg) translateX(0px) scale(1);} 
+  } 
+   
+  .back-to-top:hover .arrow{ 
+  animation-name: bounceAlpha; 
+  animation-duration:1.4s; 
+  animation-iteration-count:infinite; 
+  animation-timing-function:linear; 
+  } 
+  .back-to-top:hover .arrow:nth-child(2){ 
+  animation-name: bounceAlpha; 
+  animation-duration:1.4s; 
+  animation-delay:0.2s; 
+  animation-iteration-count:infinite; 
+  animation-timing-function:linear; 
+  } 
+   
+  @media only screen and (max-width: 575px) { 
+  .back-to-top { 
+      width: 40px; 
+      height: 40px; 
+      line-height: 40px; 
+  } 
+  .back-to-top.show { 
+      bottom: 10px; 
+      right: 10px; 
+  } 
+  .back-to-top.show:hover { 
+      bottom: 10px; 
+  } 
+  .arrow { 
+      top: 27%; 
+      left: 37%; 
+  } 
+  }
