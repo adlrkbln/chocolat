@@ -55,7 +55,6 @@ generateCartItems();
 
 let increment = (id) => {
   let selectedItem = id;
-  console.log(selectedItem);
   let search = basket.find((x) => x.id === selectedItem);
   console.log("increment");
   if(search === undefined){
@@ -102,7 +101,6 @@ let removeItem = (id) => {
   basket = basket.filter((x) => x.id !== selectedItem);
   generateCartItems();
   info();
-  location.reload();
   localStorage.setItem("prod", JSON.stringify(basket));
 };
 
@@ -131,35 +129,91 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
-let info = () =>{
-  if(basket.length !==0){
-    console.log("yes");
+let orderNow = () => {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phoneNumber = document.getElementById("phone").value;
+  if (!name || !email || !phoneNumber) {
     inform.innerHTML = `
     <h1 style="margin-top:30px">Personal info</h1>
-    <div style="margin-bottom:50px">
+  <div style="margin-bottom:50px">
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Name</label>
+                      <input id="name" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                      <input id="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Name</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1">
-                      </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Phone number</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+7-(***)-***-****">
-                      </div>
-                    <h1 style="margin-top:30px;margin-bottom:20px">Delivery</h1>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected="">Select your city</option>
-                        <option value="Astana">Astana</option>
-                        <option value="Almaty">Almaty</option>
-                        <option value="Karaganda">Karaganda</option>
-                        <option value="Semei">Semey</option>
-                    </select>
-                </div>
-                <button type="button" onclick="modall()" style="background-color:brown" class="btn btn-secondary">Order now</button>
+                      <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+                      <input id="phone" class="form-control" id="exampleFormControlInput1" placeholder="+7-(***)-***-****">
+                    </div>
+                  <h1 style="margin-top:30px;margin-bottom:20px">Delivery</h1>
+                  <select class="form-select" aria-label="Default select example">
+                      <option value="Astana">Astana</option>
+                      <option value="Almaty">Almaty</option>
+                      <option value="Karaganda">Karaganda</option>
+                      <option value="Semei">Semey</option>
+                  </select>
+              </div>
+              <p>Please fill out all the fields.</p>
+    <button type="button" onclick="orderNow()" style="background-color:brown" class="btn btn-secondary">Order now</button>`;
+  } else {
+    console.log('Name:' + name + '\nEmail:' + email + '\nPhone:' + phoneNumber +'\n'
+    + basket.map((x) => console.log("id:" + x.id + "amount:" + x.item + '\n')));
+    inform.innerHTML = `
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4 style="margin-left:50px">Order is being processed!</h4>
+      </div>
+    </div>
     `
+    modall();
   }
 };
+let info = () => {
+  if(basket.length !==0){
+  inform.innerHTML = `
+  <h1 style="margin-top:30px">Personal info</h1>
+  <div style="margin-bottom:50px">
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Name</label>
+                      <input id="name" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                      <input id="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+                      <input id="phone" class="form-control" id="exampleFormControlInput1" placeholder="+7-(***)-***-****">
+                    </div>
+                  <h1 style="margin-top:30px;margin-bottom:20px">Delivery</h1>
+                  <select class="form-select" aria-label="Default select example">
+                      <option value="Astana">Astana</option>
+                      <option value="Almaty">Almaty</option>
+                      <option value="Karaganda">Karaganda</option>
+                      <option value="Semei">Semey</option>
+                  </select>
+              </div>
+    <button type="button" id="myBtn" onclick="orderNow()" style="background-color:brown" class="btn btn-secondary">Order now</button>
+  `;}
+};
+let modall = () => {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+  span.onclick = function() {
+  modal.style.display = "none";
+  clearCart();
+  }
+  window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    clearCart();
+  }
+  }
+}
 info();
