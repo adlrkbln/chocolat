@@ -10,9 +10,9 @@ let generateShop = () => {
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">$ ${price}</p>
-                    <div onclick="increment(${id})" class="button">
+                    <button onclick="increment(${id})" class="button">
                         <a style="color:white;">Order now</a>
-                    </div>
+                    </button>
                 </div>
             </div>
             `;
