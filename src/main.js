@@ -6,7 +6,7 @@ let generateShop = () => {
             let {id,name,price,img} =x;
             return `
             <div id=product-id-${id} class="card text-center text-bg-primary">
-                <img height="160" src=${img} class="card-img-top" alt="">
+                <img height="160" src=${img} class="card-img-top" alt="${name}">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">$ ${price}</p>
