@@ -7,57 +7,57 @@ let generateShop = () => {
             if((id>=1&&id<=4)||(id>=9&&id<=12)||(id>=17&&id<=20)||(id>=25&&id<=28)){
                 if(id===1) {return `<h1 class="col-12"><a class="heading" href="Catalog.html">Cakes</a></h1><br>
                 <div id=product-id-${id} class="card text-center text-bg-primary">
-                <img height="160" src=${img} class="card-img-top" alt="">
+                <img height="160" src=${img} class="card-img-top" alt="${name}">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">$ ${price}</p>
-                    <div onclick="increment(${id})" class="button">
+                    <button onclick="increment(${id})" class="button">
                         <a style="color:white;">Order now</a>
-                    </div>
+                    </button>
                 </div>
             </div>`;}
             else if(id===9) {return `<h1 class="col-12"><a class="heading" href="Catalog.html">Cookies</a></h1>
             <div id=product-id-${id} class="card text-center text-bg-primary">
-            <img height="160" src=${img} class="card-img-top" alt="">
+            <img height="160" src=${img} class="card-img-top" alt="${name}">
             <div class="card-body">
                 <h4 class="card-title">${name}</h4>
                 <p class="card-text">$ ${price}</p>
-                <div onclick="increment(${id})" class="button">
+                <button onclick="increment(${id})" class="button">
                     <a style="color:white;">Order now</a>
-                </div>
+                </button>
             </div>
         </div>`;}
         else if(id===17){ return`<h1 class="col-12"><a class="heading" href="Catalog.html">Candies</a></h1>
         <div id=product-id-${id} class="card text-center text-bg-primary">
-        <img height="160" src=${img} class="card-img-top" alt="">
+        <img height="160" src=${img} class="card-img-top" alt="${name}">
         <div class="card-body">
             <h4 class="card-title">${name}</h4>
             <p class="card-text">$ ${price}</p>
-            <div onclick="increment(${id})" class="button">
+            <button onclick="increment(${id})" class="button">
                 <a style="color:white;">Order now</a>
-            </div>
+            </button>
         </div>
     </div>`;}
     else if(id===25) {return `<h1 class="col-12"><a class="heading" href="Catalog.html">Other</a></h1>
     <div id=product-id-${id} class="card text-center text-bg-primary">
-    <img height="160" src=${img} class="card-img-top" alt="">
+    <img height="160" src=${img} class="card-img-top" alt="${name}">
     <div class="card-body">
         <h4 class="card-title">${name}</h4>
         <p class="card-text">$ ${price}</p>
-        <div onclick="increment(${id})" class="button">
+        <button onclick="increment(${id})" class="button">
             <a style="color:white;">Order now</a>
-        </div>
+        </button>
     </div>
 </div>`; }
 else {return `
             <div id=product-id-${id} class="card text-center text-bg-primary">
-                <img height="160" src=${img} class="card-img-top" alt="">
+                <img height="160" src=${img} class="card-img-top" alt="${name}">
                 <div class="card-body">
                     <h4 class="card-title">${name}</h4>
                     <p class="card-text">$ ${price}</p>
-                    <div onclick="increment(${id})" class="button">
+                    <button onclick="increment(${id})" class="button">
                         <a style="color:white;">Order now</a>
-                    </div>
+                    </button>
                 </div>
             </div>
             `;}
